@@ -32,7 +32,7 @@ func (h *TaskHandler) Create(w http.ResponseWriter,r *http.Request) {
 }
 
 
-func (h *TaskHandler) getByID(w http.ResponseWriter, r *http.Request) {
+func (h *TaskHandler) GetByID(w http.ResponseWriter, r *http.Request) {
 	idStr := r.URL.Query().Get("id")
 	id, err := strconv.ParseInt(idStr, 10, 64)
 	if err != nil {
