@@ -8,4 +8,5 @@ type TaskService interface {
 	CreateTask(t *models.Task) error
 	GetTask(id int64) (*models.Task, error)
 	CompleteTask(id int64) error
+	CleanupExpired() (int64, error)
 }
